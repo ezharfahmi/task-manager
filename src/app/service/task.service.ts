@@ -31,7 +31,6 @@ export class TaskService {
     if (foundTask) {
       return of(foundTask);
     } else {
-      // Handle the case when no task is found
       return throwError('Task not found');
     }
   }
