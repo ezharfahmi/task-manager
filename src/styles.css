@@ -6,28 +6,9 @@ html, body {
 
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
-/* header, footer {
-    position: fixed;
-    left: 0;
-    right: 0;
-    height: 50px;
-    background-color: rgb(147, 13, 13);
-} */
-
 header {
     top: 0;
     position: fixed;
-    left: 0;
-    right: 0;
-    height: 50px;
-    background-color: rgb(147, 13, 13);
-}
-
-footer {
-    color: white;
-    padding: 2px;
-    bottom: 0;
-    text-align: center;
     left: 0;
     right: 0;
     height: 50px;
