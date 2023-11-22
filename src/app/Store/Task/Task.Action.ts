@@ -1,5 +1,5 @@
 import { createAction, props } from "@ngrx/store";
-import { Task, TaskModel } from "../Model/Task.model";
+import { Task } from "../Model/Task.model";
 
 export const LOAD_TASK='[task page]load task';
 export const LOAD_TASK_SUCCESS='[task page]load task success';

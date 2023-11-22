@@ -1,4 +1,3 @@
-import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Task } from '../Store/Model/Task.model';
 import { Observable, of, throwError } from 'rxjs';
@@ -8,9 +7,9 @@ import { Observable, of, throwError } from 'rxjs';
 })
 export class TaskService {
   private taskList: Task[] = [
-    { id: 1, title: 'Task 1', description: 'Pickup parcel', duedate: '22 Dec 2023', category: 'TEST', priority: 'high'},
-    { id: 2, title: 'Task 2', description: 'Pickup food', duedate: '23 Dec 2023', category: 'TEST', priority: 'low'},
-    { id: 3, title: 'Task 3', description: 'Pickup parcel', duedate: '24 Dec 2023', category: 'TEST', priority: 'medium'},
+    { id: 1, title: 'Task 1', description: 'Pickup parcel', duedate: 'Dec 22, 2023', category: 'TEST', priority: 'high'},
+    { id: 2, title: 'Task 2', description: 'Pickup food', duedate: 'Dec 23, 2023', category: 'TEST', priority: 'low'},
+    { id: 3, title: 'Task 3', description: 'Pickup parcel', duedate: 'Dec 24, 2023', category: 'TEST', priority: 'medium'},
   ];
 
   Create(data: Task): Observable<Task> {
@@ -22,6 +21,7 @@ export class TaskService {
   }
 
   GetAll(): Observable<Task[]> {
+    console.log(this.taskList);
     return of(this.taskList);
   }
 

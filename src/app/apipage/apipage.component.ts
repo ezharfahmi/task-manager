@@ -31,6 +31,7 @@ export class ApipageComponent {
     this.isLoading = true;
     const apiUrl = `https://reqres.in/api/users?page=${this.currentPage}`;
   
+    // The token can be put here once integrate with BE
     const headers = new HttpHeaders({
       Authorization: 'Bearer YOUR_AUTH_TOKEN'
     });

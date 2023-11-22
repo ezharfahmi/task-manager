@@ -4,7 +4,6 @@ import { TaskService } from "src/app/service/task.service";
 import { addtask, addtasksuccess, deletetasksuccess, deletetask, gettask, gettasksuccess, loadtask, loadtaskfail, loadtasksuccess, updatetask, updatetasksuccess } from "./Task.Action";
 import { catchError, exhaustMap, of, map, switchMap } from "rxjs";
 import { showalert } from "../Common/App.Action";
-import { Task } from "../Model/Task.model";
 
 @Injectable()
 export class TaskEffects {
