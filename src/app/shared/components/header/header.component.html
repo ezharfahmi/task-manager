@@ -1,0 +1,28 @@
+<mat-toolbar>
+  <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
+    <mat-icon>menu</mat-icon>
+  </button>
+  <mat-menu #menu="matMenu">
+    <button *ngIf="userRole == 'ADMIN'" (click)="navigate('apipage')" mat-menu-item>
+      <mat-icon>cloud_download</mat-icon>
+      <span>Api Call</span>
+    </button>
+    <button disabled *ngIf="userRole == 'USER'" mat-menu-item>
+      <mat-icon>cloud_download</mat-icon>
+      <span>Api Call</span>
+    </button>
+    <button mat-menu-item disabled>
+      <mat-icon>attach_money</mat-icon>
+      <span>Subscription</span>
+    </button>
+    <button (click)="navigate('profilepage')" mat-menu-item>
+      <mat-icon>person_outline</mat-icon>
+      <span>My Profile</span>
+    </button>
+  </mat-menu>
+    <span>CUSTOMER JOURNEY</span>
+    <span class="example-spacer"></span>
+    <div class="card flex justify-content-center">
+      <button mat-raised-button color="primary" (click)="logout()">LOGOUT</button>
+    </div>
+</mat-toolbar>
